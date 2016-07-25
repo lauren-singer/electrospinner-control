@@ -1,8 +1,8 @@
 import Tkinter as tk
 import ttk
 import time
-from sensoradapter import SensorAdapter
-from motoradapter import MotorAdapter
+from HumiditySensors.DHT import DHT
+from PumpAdapters.OSPump import PrintedPump
 '''
 runmotor = Process(target=MotorGui)
 runmotor.start()
@@ -32,7 +32,7 @@ class RunGUI(object):
 		self.root.mainloop()
 	
 	def setup_sensorframe(self):
-		self.sensor_adapter = SensorAdapter()
+		self.sensor_adapter = DHT()
 		self.radiobutton_frame = tk.Frame(self.frame1)
 		self.radiobutton_frame.pack()
 		
@@ -161,7 +161,7 @@ class RunGUI(object):
 		self.frame1.after(500,self.print_sensor_data)
 
 	def setup_motorframe(self):
-		self.motor_adapter = MotorAdapter()
+		self.motor_adapter = PrintedPump()
 		
 		self.notebook = ttk.Notebook(self.frame2)
 		self.run_frame = ttk.Frame(self.notebook)

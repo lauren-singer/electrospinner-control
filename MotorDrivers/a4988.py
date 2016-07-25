@@ -4,7 +4,7 @@
 
 import RPi.GPIO as GPIO
 
-class MotorDriver():
+class a4988_Driver():
 	def __init__(self):
 
 		# turn on motor (18) and driver (6)
