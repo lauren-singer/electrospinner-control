@@ -6,7 +6,7 @@ Calculate duty cycle
 Make list
 Export recent values to sensorgui
 '''
-from sensordriver import DHT_Reader
+from HumiditySensors.DHT_Reader import DHT_Reader
 import RPi.GPIO as GPIO
 import time
 import csv

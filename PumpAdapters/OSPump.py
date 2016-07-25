@@ -1,15 +1,15 @@
 '''
 
 '''
-from motordriver import MotorDriver
+from MotorDrivers.a4988 import a4988_Driver
 import math
 import datetime
 import time
 
-class MotorAdapter():
+class PrintedPump():
 	def __init__(self):
 		
-		self.driver = MotorDriver()
+		self.driver = a4988_Driver()
 		
 		self.is_motor_running = True
 		self.motor_pause = True
